@@ -52,7 +52,7 @@ function ReplyList() {
   return (
     <section className="mb-8">
       <h4 className="mt-8 mb-4 ml-2">댓글 {list?.length || 0}개</h4>
-      <InfiniteScroll pageStart={1} loadMore={fetchNextPage} hasMore={hasNext} loader={<Spinner />}>
+      <InfiniteScroll pageStart={1} loadMore={fetchNextPage} hasMore={hasNext} loader={<Spinner key="0" />}>
         {list || []}
       </InfiniteScroll>
 
